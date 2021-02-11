@@ -6,5 +6,7 @@
 
 // Entrada => n notas
 // Processamento =>
-// 1. Colocar notas em array
+// 1. Colocar notas em um array
 // Saída => média das notas
+
+const readlineS
