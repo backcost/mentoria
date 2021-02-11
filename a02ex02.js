@@ -1,13 +1,14 @@
-// 02. Crie uma função que recebe um array de 3 números 
-// e coloque eles em ordem crescente. 
+// 02. Crie uma função que recebe um array 
+// de 3 números e coloque eles em ordem crescente. 
 // Crie sua própria função para isso.
 
 
 // Entrada => array de 3 números
 // Processamento =>
 // 1. Criar função
-// 2. Criar array ordered para colocar os números em ordem
+// 2. Criar array sorted para colocar os números em ordem
 // Saída => array ordenado
+
 
 function sort(array) {
     let sorted = [array[0]]
@@ -23,8 +24,9 @@ function sort(array) {
         sorted.splice(1,0,array[2])
     }
     return sorted
-    sorted.forEach()
 } 
+
+
 console.log(sort([1,2,3]))
 console.log(sort([1,3,2]))
 console.log(sort([2,1,3]))
