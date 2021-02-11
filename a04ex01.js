@@ -7,6 +7,22 @@
 // Entrada => n notas
 // Processamento =>
 // 1. Colocar notas em um array
+// 2. Parar quando o usuario digitar fim
+// 3. Somar componentes do array
+// 4. Dividir a soma pelo length do array
 // Saída => média das notas
 
-const readlineS
+let readlineSync = require('readline-sync')
+
+let run = true
+let grades = []
+
+while(run) {
+    let input = Number(readlineSync.question('Digite uma nota: '))
+    
+    if (input === 'fim') {
+        run = false
+    } 
+    grades.push(input)
+}
+console.log(grades)
