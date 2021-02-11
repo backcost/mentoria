@@ -5,6 +5,7 @@
 // último índice em que o número aparece 
 // (como nos métodos indexOf e lastIndexOf).
 
+
 // Entrada => Vetor e o número
 // Processamento =>
 // 0. Inicializar um array chamado posições vazio
@@ -14,6 +15,7 @@
 // 3. Se não, continuamos para o prox número
 // 4. Retornar o array de posições
 // Saída => Vetor contendo todas as posições que o número aparece
+
 
 const find = (array, number) => {
     const positions = []
