@@ -1,0 +1,23 @@
+{
+  "name": "vsc",
+  "version": "1.0.0",
+  "description": "Todos os desafios feitos na mentoria",
+  "main": "a02ex01.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backcost/mentoria.git"
+  },
+  "author": "Gabriel Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/backcost/mentoria/issues"
+  },
+  "homepage": "https://github.com/backcost/mentoria#readme"
+}
