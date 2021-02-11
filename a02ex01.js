@@ -6,14 +6,14 @@
 // Entrada => array de 2 números
 // Processamento =>
 // 1. Criar função
-// 2. Criar array ordered para colocar os números em ordem
+// 2. Criar array sorted para colocar os números em ordem
 // Saída => array ordenado
 
 function sort(array) {
-    let ordered = [array[0]]
+    let sorted = [array[0]]
     if (array[0]>array[1]) {
-        ordered.unshift(array[1])
-        return ordered
+        sorted.unshift(array[1])
+        return sorted
     } else {
         return array
     }

@@ -1,9 +1,9 @@
-// 01. Crie uma função que recebe um array 
-// de 2 números e coloque eles em ordem
-// crescente. Não use o método sort.
+// 02. Crie uma função que recebe um array de 3 números 
+// e coloque eles em ordem crescente. 
+// Crie sua própria função para isso.
 
 
-// Entrada => array de 2 números
+// Entrada => array de 3 números
 // Processamento =>
 // 1. Criar função
 // 2. Criar array ordered para colocar os números em ordem
