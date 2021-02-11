@@ -6,35 +6,23 @@
 
 // Entrada => readlineSync para inserir 3 números
 // Processamento =>
-// 1. Criar função
-// 2. Criar array sorted para colocar os números em ordem
+// 1. Criar array para inserir os números digitados pelo usuário
+// 2. Usar o for para inserir números em um array
+// 3. Usar o for para inverter o array
 // Saída => array invertido
 
 
 let readlineSync = require('readline-sync')
+let array = []
+let reversed = []
 
-let run = true
-let grades = []
-
-while(run) {
-    let input = Number(readlineSync.question('Digite uma nota: '))
-    
-    if (input === 'fim') {
-        run = false
-    } 
-    grades.push(input)
+for(let c = 1; c < 4;c++) {
+    let input = readlineSync.question('Digite uma numero: ')
+    array.push(input)
 }
-console.log(grades)
+for(let pos in array) {
+    reversed.push(array[array.length-1-pos])
+}
 
 
-console.log(sort([1,2,3]))
-console.log(sort([1,3,2]))
-console.log(sort([2,1,3]))
-console.log(sort([2,3,1]))
-console.log(sort([3,1,2]))
-console.log(sort([3,2,1]))
-console.log(sort([1,1,1]))
-console.log(sort([1,2,2]))
-console.log(sort([2,1,1]))
-console.log(sort([1,1,2]))
-console.log(sort([2,2,1]))
+console.log(reversed)
