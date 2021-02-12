@@ -18,9 +18,9 @@ minorArray = []
 olderArray =[]
 
 while(run) {
-    let input = readlineSync.question('Digite a idade (ou "sair" para encerrar): ')
+    let input = readlineSync.question('Digite a idade (ou "sair" para encerrar): ').toUpperCase()
 
-    if (input === 'sair' || input === 'Sair' || input === 'SAIR') {
+    if (input === 'SAIR') {
         run = false
         break
     }
