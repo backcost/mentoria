@@ -6,28 +6,35 @@
 // Entrada => array de n números
 // Processamento =>
 // 1. Criar função
-// 2. Criar array sorted para colocar os números em ordem
+// 2. Criar array sorted e inserir o primeiro número
+// 3. For para percorrer array original
+// 4. While parar comparar om array ordenado ja existente
 // Saída => array ordenado
 
 
-function sort(array) {
+const sort = (array) => {
     let sorted = [array[0]]
-    if (array[1]>array[0]) {
-        sorted.push(array[1])
-    } else {
-        sorted.unshift(array[1])
-    } if (array[2]>=sorted[1]) {
-        sorted.push(array[2])
-    } else if (array[2]<=sorted[0]) {
-        sorted.unshift(array[2])
-    } else {
-        sorted.splice(1,0,array[2])
+
+    for(let pos = 1;pos < array.length;pos++){
+        let c = 0
+        while (c < sorted.length) {
+            if (array[pos] < sorted[c]) {
+                sorted.splice(c,0,array[pos])
+                break
+            } else if (c === sorted.length - 1) {
+                sorted.push(array[pos])
+                break
+            } else {
+                c++
+            }
+        }
+        
     }
     return sorted
 } 
 
 
-console.log(sort([1,2,3,4]))
+console.log(sort([3,2,3,4]))
 console.log(sort([1,2,4,3]))
 console.log(sort([1,3,2,4]))
 console.log(sort([1,3,4,2]))
