@@ -1,11 +1,9 @@
 // 1. Crie um objeto de data com a data de hoje
-const readlineSync = require('readline-sync')
-while(true) {
-    let foodCode = readlineSync.question('Digite o codigo do produto ou "Fim" para encerrar: ').toLowerCase()
-    if (foodCode === 'fim') {
-        break
-    }
-    let amount = readlineSync.question('Digite a quantidade: ')
-    console.log(foodCode)
-    console.log(amount)
-}
+
+// Entrada => 
+// Processamento => Passar o dia d hoje do UTC para BRST
+// Saída => Data de hoje horário de Brasília
+
+var todayMiliSecondsBRST = Date.parse(new Date()) - 3*60*60*1000
+
+console.log(new Date(todayMiliSecondsBRST))
