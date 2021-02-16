@@ -9,8 +9,8 @@
 
 
 var oneDayMiliSeconds = 24*60*60*1000
-var today = Date.parse(new Date())
-var past = Date.parse(new Date("01/01/2017"))
+var today = new Date()
+var past = new Date("01/01/2017")
 var days = (today - past)/(oneDayMiliSeconds)
 
 console.log(`Já se passaram ${days.toFixed(0)-1} dias desde 01/01/2017;`)
