@@ -16,14 +16,14 @@ const daysBetweenBR = (DateBR) => {
     var dateMMDD = new Date(`${DateBR[3]}${DateBR[4]}/${DateBR[0]}${DateBR[1]}/${DateBR[6]}${DateBR[7]}${DateBR[8]}${DateBR[9]}`)
     var today = new Date()
 
-    var days = ((today - dateMMDD) / dayMiliSeconds).toFixed(0)
-
+    var days = parseInt((today - dateMMDD) / dayMiliSeconds)
     return days
 }
 
 const intheLastSevenDays = (datesArray) => {
-    for (let count = 0; count < datesArray.length; count++) {
-        if (daysBetweenBR(datesArray[count]) <= 7) {
+    for (let date of datesArray) {
+        console.log(date)
+        if (daysBetweenBR(date) <= 7) {
             return `Você fez atividade física nos últimos 7 dias`
         }
     }
