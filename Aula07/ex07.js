@@ -5,9 +5,7 @@
 
 // Entrada => array com datas q vc fez atividade física
 // Processamento =>
-// 1. função para ver quantos dias tem entre data desejada e hoje
-// 2. função para saber se o retorno da função anterior é menor ou igual
-// que sete.
+// 1. função com for para ver se a data está presente no array
 // Saída => Dizer se fez ou não atividade física no dia 01/01/2021
 
 
