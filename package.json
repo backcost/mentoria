@@ -4,6 +4,7 @@
   "description": "Todos os desafios feitos na mentoria",
   "main": "a02ex01.js",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {},
