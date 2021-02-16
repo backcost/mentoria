@@ -22,7 +22,6 @@ const daysBetweenBR = (DateBR) => {
 
 const intheLastSevenDays = (datesArray) => {
     for (let date of datesArray) {
-        console.log(date)
         if (daysBetweenBR(date) <= 7) {
             return `Você fez atividade física nos últimos 7 dias`
         }
