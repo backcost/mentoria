@@ -11,7 +11,7 @@
 var oneDayMiliSeconds = 24*60*60*1000
 var today = new Date()
 var past = new Date("01/01/2017")
-var days = (today - past)/(oneDayMiliSeconds)
+var days = parseInt((today - past)/(oneDayMiliSeconds))
 
-console.log(`Já se passaram ${days.toFixed(0)-1} dias desde 01/01/2017;`)
-console.log(`Hoje é o dia ${days.toFixed(0)}!`)
+console.log(`Já se passaram ${days-1} dias desde 01/01/2017;`)
+console.log(`Hoje é o dia ${days}!`)
