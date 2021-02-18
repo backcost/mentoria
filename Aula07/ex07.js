@@ -24,3 +24,31 @@ const physicalActivities = ['14/02/2021', '13/02/2021', '12/02/2021',
                             '08/02/2021', '07/02/2021', '01/01/2021']
 
 console.log(firstDay2021(physicalActivities))
+
+//Marcle
+// const datesExercises = [
+//     '2020/2/10',
+//     '2021/2/4',
+//     '2021/2/1',
+//     '2021/2/7',
+//     '2021/2/5',
+//     '2021/1/1',
+//   ];
+  
+//   const madePhysicalActivity = (dates) => {
+//     const firstDayOfYear = new Date(2021, 0, 1);
+//     let result = 'Não';
+  
+//     for(let date of dates) {
+//       const convertedDate  = new Date(date);
+  
+//       if (convertedDate.getTime() === firstDayOfYear.getTime()) {
+//         result = 'Sim';
+//         break;
+//       }
+//     }
+  
+//     console.log(result);
+//   };
+  
+//   madePhysicalActivity(datesExercises);
