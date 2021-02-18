@@ -15,13 +15,13 @@ const daysBetween = (firstDate, secondDate) => {
     var firstMiliSeconds = Date.parse(new Date(firstDate))
     var secondMiliSeconds = Date.parse(new Date(secondDate))
 
-    var days = ((secondMiliSeconds - firstMiliSeconds)/(oneDayMiliSeconds))-1
+    var days = ((secondMiliSeconds - firstMiliSeconds)/(oneDayMiliSeconds))
     
     return days
 }
 
 console.log(daysBetween("01/01/2017","02/18/2021"))
-console.log(daysBetween("02/13/2021","02/14/2021"))
+console.log(daysBetween("02/10/2021","02/18/2021"))
 console.log(daysBetween("05/14/1995","02/14/2021"))
 
 // dd/mm/aaaa
@@ -33,7 +33,7 @@ const daysBetweenBR = (firstDateBR, secondDateBR) => {
     var firstMiliSeconds = Date.parse(new Date(firstDateMMDD))
     var secondMiliSeconds = Date.parse(new Date(secondDateMMDD))
 
-    var days = ((secondMiliSeconds - firstMiliSeconds)/(oneDayMiliSeconds))-1
+    var days = ((secondMiliSeconds - firstMiliSeconds)/(oneDayMiliSeconds))
     
     return days
 }
