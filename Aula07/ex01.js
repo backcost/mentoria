@@ -7,3 +7,9 @@
 var todayMiliSecondsBRST = Date.parse(new Date()) - 3*60*60*1000
 
 console.log(new Date(todayMiliSecondsBRST))
+
+// Marcle
+// var today = new Date()
+// var dateBR = today.toString()
+
+// console.log(dateBR)
