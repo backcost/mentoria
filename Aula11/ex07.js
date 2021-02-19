@@ -1,5 +1,5 @@
-// 6.  Escreva uma função que remova um elemento especifico do array.
-
+// 7. Escreva uma função para encontrar um elemento em um array, 
+// caso exista retornar a posição, caso não exista retornar null.
 
 const remove = (array, element) => {
     return array.filter((different) => different !== element)
