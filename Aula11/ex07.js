@@ -1,10 +1,14 @@
 // 7. Escreva uma função para encontrar um elemento em um array, 
 // caso exista retornar a posição, caso não exista retornar null.
 
-const remove = (array, element) => {
-    return array.filter((different) => different !== element)
+const findElement = (array, element) => {
+    var index = array.indexOf(element)
+    if (index > 0) {
+        return index
+    }
+    return null
 }
-
-console.log(remove([1,2,3], 3)); // => [1,2]
-console.log(remove([1,2,3,3], 3)); // => [1,2]
-console.log(remove([1,2,3,2,5,2], 2)); // => [1,3,5]
+console.log(findElement([1,2,3], 3)); // => 2
+console.log(findElement([1,2,3,3], 3)); // => 2
+console.log(findElement([1,2,3,2,5,2], 2)); // => 1
+console.log(findElement([1,2,3,2,5,2], 6)); // => null
