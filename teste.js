@@ -1,6 +1,17 @@
-function multiply(multiplicador, ...args) {
-    console.log(args)
-    return args.map(x => multiplicador * x)
+const howManyTimesRepeat = (string) => {
+    for (let letter of string) {
+        count = 0
+        for (let again of string) {
+
+            if (letter === again) {
+                count++
+            }
+        }
+        if (count === 1) {
+            return letter
+        }
+    }
 }
-const a = multiply(2, 1, 2, 4)
-console.log(a)
+
+console.log(howManyTimesRepeat('Gabriel Costa'))
+console.log(howManyTimesRepeat('Ferramentas'))
