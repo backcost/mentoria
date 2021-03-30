@@ -208,24 +208,22 @@ newList.push('C')
 newList.push('A')
 newList.push('D')
 
+
+
 function removeAFromLinkedList(list) {
     let currentNode = list.head
-    let c = 0
-    console.log
-    while (currentNode.next) {
-        if (currentNode.value === 'A') { 
+    for (let i = 0; i < list.length; i++) {
+        if (currentNode.value === 'A') {
             currentNode = currentNode.next
-            list.removeFrom(c)
-            c--
+            list.removeFrom(i)
+            i--
         } else {
             currentNode = currentNode.next
         }
-        c++
     }
     return list
 }
 
 const filteredList = removeAFromLinkedList(newList)
-console.log('----------------------------')
 filteredList.print()
 // => B, C, D
