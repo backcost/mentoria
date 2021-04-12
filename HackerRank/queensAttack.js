@@ -17,39 +17,24 @@
 // position and the locations of all the obstacles, find and print the 
 // number of squares the queen can attack from her position at (rq, cq).
 
-const queensAttack = (n, k, r_q, c_q, obstacles = [[]]) => {
-    if (n % 2 === 0) {
-        var maxAttack = 4 * n - 5
-    } else {
-        var maxAttack = 4 * n - 4
-    }
+const queensAttack = (n, k, r_q, c_q, obstacles) => {
+    // without obstacles
+    let north = n - r_q
+    let south = r_q - 1
+    let east = n - c_q
+    let west = c_q - 1
 
-    for (let i = 1; i < n / 2; i++) {
-        if (c_q === i  || c_q === n + 1 - i || r_q === i || r_q === n + 1 - i) {
-            maxAttack -= 2 * (Math.ceil(n / 2) - i)
-        }
-    }
+    let northeast = Math.min(east, north)
+    let northwest = Math.min(west, north)
+    let southeast = Math.min(east, south)
+    let southwest = Math.min(west, south)
 
-    for(el of obstacles) {
-        var r_o = el[0]
-        var c_o = el[1]
-
-        if (r_o === r_q) {
-            if (c_o >= c_q) {
-                maxAttack -= (n - c_o + 1)
-            } else {
-                maxAttack -= c_o
-            }
-            
-        } else if (c_o === c_q) {
-            if (r_o >= r_q) {
-                maxAttack -= (n - r_o + 1)
-            } else {
-                maxAttack -= r_o
-            }
-        }
-    }
+    // now with obstacles
     
+
+    const maxAttack = north + south + east + west + northeast + northwest +
+    southeast + southwest
+
     return maxAttack
 
 }
