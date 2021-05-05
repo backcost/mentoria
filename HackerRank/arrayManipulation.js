@@ -4,11 +4,8 @@ given indices, inclusive. Once all operations have been performed,
 return the maximum value in the array. */
 
 const arrayManipulation = (n, queries) => {
-    const array = []
-
-    for (let i = 0; i < n; i++) {
-        array.push(0)
-    }
+    const array = Array(n).fill(0)
+    
     for (let query of queries) {
         for (let i = query[0] - 1; i < query[1]; i++) {
             var oldValue = array[i]
