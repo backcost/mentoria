@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>APF - Meu Titulo de Págin</title>
+
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      p:first-child {
+        color: blue;
+      }
+
+      div > p {
+        color: red;
+      }
+
+      div + p {
+        color: blue;
+      }
+
+      span ~ p {
+        font-size: 50px;
+      }
+
+      [name] {
+        color: red;
+      }
+
+      [name="marcle"] {
+        color: black;
+      }
+
+      [name~="mar"] {
+        color: white;
+      }
+
+      [name|="m"] {
+        font-size: 20px;
+      }
+
+      [name$="le"] {
+        color: pink;
+      }
+
+      [name$="le"]::after {
+        content: 'Marcle';
+        color: red;
+      }
+
+      p:hover {
+        color: white;
+      }
+
+      p:nth-child(2) {
+        color: blue;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <div>
+      <p>
+        Meu Paragrafo
+      </p>
+
+      <p>
+        Meu Paragrafo 2
+      </p>
+
+    </div>
+
+    <div>
+      <p>
+        Programador
+      </p>
+      <span name="marc">
+        Marcle
+      </span>
+      <span name="mar">
+        Senior
+      </span>
+      <p>
+        Professor
+      </p>
+      <span name="marcle">
+        A Profissão
+      </span>
+    </div>
+    <div class="galeria">
+      <div id="meu-id" class="imagem" name="marcle">
+        <span class="counter">
+          1 / 4
+        </span>
+        <img
+          src="https://www.softsell.com.br/wp-content/uploads/2020/09/hacker-etico-tudo-o-que-voce-precisa-saber-sobre-essa-profissao-20200828142932.jpg.jpg"
+          alt="hacker"
+          class="preview"
+        />
+        <div class="controls">
+          <span class="anterior"> < </span>
+
+          <span class="proximo"> > </span>
+        </div>
+      </div>
+      <div class="miniaturas">
+        <div
+          class="miniatura active"
+          data-src="https://www.softsell.com.br/wp-content/uploads/2020/09/hacker-etico-tudo-o-que-voce-precisa-saber-sobre-essa-profissao-20200828142932.jpg.jpg"
+        ></div>
+        <div
+          class="miniatura"
+          data-src="https://blog.intnet.com.br/wp-content/uploads/2019/08/295599-como-se-proteger-dos-ataques-de-hackers-confira.jpg"
+        ></div>
+        <div
+          class="miniatura"
+          data-src="https://conteudo.imguol.com.br/c/parceiros/36/2020/12/12/hacker-diz-que-conseguiu-invadir-sistema-de-alerta-de-emergencia-dos-eua-1607781978405_v2_1920x1080.jpg"
+        ></div>
+        <div
+          class="miniatura"
+          data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV9loXCZKY7DzpBKcYhPR3mAHWmrj2awO4lg&usqp=CAU"
+        ></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const miniaturas = document.querySelectorAll(".miniatura");
+        const anterior = document.querySelector(".anterior");
+        const proximo = document.querySelector(".proximo");
+        const preview = document.querySelector(".preview");
+        const counter = document.querySelector(".counter");
+
+        let currentImage = 0;
+
+        const changeImage = (preview, img) => {
+          const {
+            dataset: { src },
+          } = img;
+          preview.src = src;
+
+          const active = document.querySelector(".active");
+
+          active.classList.toggle("active");
+
+          img.classList.toggle("active");
+
+          updateCounter();
+        };
+
+        const updateCounter = () => {
+          const text = `${currentImage + 1} / ${miniaturas.length}`;
+
+          counter.innerHTML = text;
+        }
+
+        miniaturas.forEach((mini, index) => {
+          mini.addEventListener("click", () => {
+            changeImage(preview, mini);
+            currentImage = index;
+          });
+        });
+
+        anterior.addEventListener("click", () => {
+          currentImage--;
+
+          if (currentImage < 0) {
+            currentImage = miniaturas.length - 1;
+          }
+
+          changeImage(preview, miniaturas[currentImage]);
+        });
+
+        proximo.addEventListener("click", () => {
+          currentImage++;
+
+          if (currentImage > miniaturas.length - 1) {
+            currentImage = 0;
+          }
+
+          changeImage(preview, miniaturas[currentImage]);
+        });
+
+        setInterval(() => {
+          if (currentImage > miniaturas.length - 1) {
+            currentImage = 0;
+          }
+
+          changeImage(preview, miniaturas[currentImage]);
+
+          currentImage++;
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
